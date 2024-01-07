@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  postgres-db:
+    container_name: postgres-db-pedidos
+    image: postgres:15
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "pedidos"
+      TZ: "America/Sao_Paulo"
+    ports:
+      - "5432:5432"
+    #volumes:
+      #-  ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - docker-network
+    restart: always
+
+networks:
+  docker-network:
+    driver: bridge

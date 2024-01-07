@@ -1,0 +1,5 @@
+/fornecedores-api/mysql-data/
+/fornecedores-api/target/
+/.idea/
+/pedidos-api/target/
+/pedidos-api/postgres-data/

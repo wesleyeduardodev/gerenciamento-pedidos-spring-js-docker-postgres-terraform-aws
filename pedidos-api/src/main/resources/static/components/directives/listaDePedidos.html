@@ -1,0 +1,33 @@
+<div ng-repeat="pedido in pedidos">
+    <h3>Pedido #{{pedido.id}}</h3>
+
+    <div>
+        <strong>Fornecedor:</strong>
+        {{pedido.fornecedor.nome}}
+    </div>
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Código</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in pedido.itens">
+                <td>{{item.produto.nome}}</td>
+                <td>{{item.produto.gtin}}</td>
+                <td>{{item.quantidade}}</td>
+                <td>{{item.preco | currency}}</td>
+                <td>{{item.total | currency}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr/>
+</div>

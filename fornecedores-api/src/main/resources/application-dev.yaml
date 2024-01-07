@@ -1,0 +1,36 @@
+server:
+  port: ${SERVER_PORT}
+
+spring:
+  application:
+    name: "fornecedores-api"
+
+  config:
+    activate:
+      on-profile:
+        - dev
+
+  datasource:
+    url: jdbc:mysql://mysql-db:3306/fornecedores?currentSchema=public
+    username: user
+    password: root
+    hikari:
+      maximum-pool-size: 30
+      minimum-idle: 1
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+  sql:
+    init:
+      mode: always
+
+springdoc:
+  swagger-ui:
+    operations-sorter: method
+    path: "/fornecedores-api/swagger-ui.html"

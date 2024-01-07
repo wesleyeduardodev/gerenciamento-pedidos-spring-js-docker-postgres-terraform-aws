@@ -1,0 +1,187 @@
+[
+  {
+    "codigoProduto": "7894900011517",
+    "fornecedores": [
+      {
+        "cnpj": "56.918.868/0001-20",
+        "precos": [
+          {
+            "preco": 6.89,
+            "quantidadeMinima": 1
+          },
+          {
+            "preco": 5.89,
+            "quantidadeMinima": 10
+          }
+        ],
+        "nome": "Fornecedor 1"
+      },
+      {
+        "cnpj": "37.563.823/0001-35",
+        "precos": [
+          {
+            "preco": 6.8,
+            "quantidadeMinima": 1
+          },
+          {
+            "preco": 6.0,
+            "quantidadeMinima": 10
+          }
+        ],
+        "nome": "Fornecedor 2"
+      }
+    ]
+  },
+  {
+    "codigoProduto": "7891910000197",
+    "fornecedores": [
+      {
+        "cnpj": "56.918.868/0001-20",
+        "precos": [
+          {
+            "preco": 2.59,
+            "quantidadeMinima": 1
+          },
+          {
+            "preco": 2.0,
+            "quantidadeMinima": 5
+          }
+        ],
+        "nome": "Fornecedor 1"
+      },
+      {
+        "cnpj": "37.563.823/0001-35",
+        "precos": [
+          {
+            "preco": 2.59,
+            "quantidadeMinima": 1
+          },
+          {
+            "preco": 1.99,
+            "quantidadeMinima": 10
+          }
+        ],
+        "nome": "Fornecedor 2"
+      }
+    ]
+  },
+  {
+    "codigoProduto": "7892840222949",
+    "fornecedores": [
+      {
+        "cnpj": "56.918.868/0001-20",
+        "precos": [
+          {
+            "preco": 4.5,
+            "quantidadeMinima": 1
+          },
+          {
+            "preco": 3.1,
+            "quantidadeMinima": 100
+          }
+        ],
+        "nome": "Fornecedor 1"
+      },
+      {
+        "cnpj": "37.563.823/0001-35",
+        "precos": [
+          {
+            "preco": 4.5,
+            "quantidadeMinima": 10
+          },
+          {
+            "preco": 4.1,
+            "quantidadeMinima": 35
+          }
+        ],
+        "nome": "Fornecedor 2"
+      },
+      {
+        "cnpj": "42.217.933/0001-85",
+        "precos": [
+          {
+            "preco": 4.13,
+            "quantidadeMinima": 10
+          },
+          {
+            "preco": 4.1,
+            "quantidadeMinima": 22
+          }
+        ],
+        "nome": "Fornecedor 3"
+      }
+    ]
+  },
+  {
+    "codigoProduto": "7891910007110",
+    "fornecedores": [
+      {
+        "cnpj": "56.918.868/0001-20",
+        "precos": [
+          {
+            "preco": 2.3,
+            "quantidadeMinima": 1
+          },
+          {
+            "preco": 2.0,
+            "quantidadeMinima": 100
+          }
+        ],
+        "nome": "Fornecedor 1"
+      }
+    ]
+  },
+  {
+    "codigoProduto": "7891000053508",
+    "fornecedores": [
+      {
+        "cnpj": "42.217.933/0001-85",
+        "precos": [
+          {
+            "preco": 5.99,
+            "quantidadeMinima": 1
+          },
+          {
+            "preco": 5.0,
+            "quantidadeMinima": 10
+          }
+        ],
+        "nome": "Fornecedor 3"
+      }
+    ]
+  },
+  {
+    "codigoProduto": "7891000100103",
+    "fornecedores": [
+      {
+        "cnpj": "42.217.933/0001-85",
+        "precos": [
+          {
+            "preco": 5.0,
+            "quantidadeMinima": 5
+          }
+        ],
+        "nome": "Fornecedor 3"
+      }
+    ]
+  },
+  {
+    "codigoProduto": "7891991010856",
+    "fornecedores": [
+      {
+        "cnpj": "42.217.933/0001-85",
+        "precos": [
+          {
+            "preco": 3.15,
+            "quantidadeMinima": 1
+          },
+          {
+            "preco": 3.0,
+            "quantidadeMinima": 10
+          }
+        ],
+        "nome": "Fornecedor 3"
+      }
+    ]
+  }
+]

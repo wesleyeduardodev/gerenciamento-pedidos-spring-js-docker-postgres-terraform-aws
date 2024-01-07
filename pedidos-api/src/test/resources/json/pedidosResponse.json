@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "fornecedor": {
+      "cnpj": "42217933000185",
+      "nome": "Fornecedor 3"
+    },
+    "itens": [
+      {
+        "produto": {
+          "id": 3,
+          "gtin": "7892840222949",
+          "nome": "SALGADINHO FANDANGOS QUEIJO"
+        },
+        "quantidade": 15,
+        "preco": 4.13,
+        "total": 61.95
+      },
+      {
+        "produto": {
+          "id": 5,
+          "gtin": "7891000053508",
+          "nome": "ACHOCOLATADO NESCAU 2.0"
+        },
+        "quantidade": 30,
+        "preco": 5.0,
+        "total": 150.0
+      },
+      {
+        "produto": {
+          "id": 6,
+          "gtin": "7891000100103",
+          "nome": "LEITE CONDENSADO MOÇA"
+        },
+        "quantidade": 40,
+        "preco": 5.0,
+        "total": 200.0
+      },
+      {
+        "produto": {
+          "id": 7,
+          "gtin": "7891991010856",
+          "nome": "CERVEJA BUDWEISER"
+        },
+        "quantidade": 50,
+        "preco": 3.0,
+        "total": 150.0
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "fornecedor": {
+      "cnpj": "37563823000135",
+      "nome": "Fornecedor 2"
+    },
+    "itens": [
+      {
+        "produto": {
+          "id": 1,
+          "gtin": "7894900011517",
+          "nome": "REFRIGERANTE COCA-COLA 2LT"
+        },
+        "quantidade": 5,
+        "preco": 6.8,
+        "total": 34.0
+      },
+      {
+        "produto": {
+          "id": 2,
+          "gtin": "7891910000197",
+          "nome": "AÇÚCAR REFINADO UNIÃO 1KG"
+        },
+        "quantidade": 10,
+        "preco": 1.99,
+        "total": 19.90
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "fornecedor": {
+      "cnpj": "56918868000120",
+      "nome": "Fornecedor 1"
+    },
+    "itens": [
+      {
+        "produto": {
+          "id": 4,
+          "gtin": "7891910007110",
+          "nome": "AÇÚCAR DE CONFEITEIRO UNIÃO GLAÇÚCAR"
+        },
+        "quantidade": 20,
+        "preco": 2.3,
+        "total": 46.0
+      }
+    ]
+  }
+]

@@ -1,0 +1,49 @@
+server:
+  port: 8080
+
+spring:
+
+  datasource:
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/pedidos
+    password: root
+    driver-class-name: "org.postgresql.Driver"
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+  profiles:
+    active: dev-ide
+
+basic:
+  auth:
+    user: admin
+    password: admin
+    roles: admin
+
+base:
+  url:
+    fornecedor: http://localhost:81/api/fornecedores/produtos/
+
+path:
+  resourse:
+    json: src/main/resources/json/
+
+mensagem:
+  erro:
+    negocial:
+      fornecedor: Nenhum fornecedor encontrado para a quantidade solicitada do produto
+
+springdoc:
+  swagger-ui:
+    operations-sorter: method
+    path: "/pedidos-api/swagger-ui.html"

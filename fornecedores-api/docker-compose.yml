@@ -1,0 +1,26 @@
+version: '3.3'
+
+#Alterar porta interna MySql: MYSQL_TCP_PORT: 3308
+
+services:
+  mysql-db:
+    container_name: mysql-db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'fornecedores'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    #volumes:
+      #- ./mysql-data:/var/lib/mysql/data
+    networks:
+      - docker-network
+
+networks:
+  docker-network:
+    driver: bridge
