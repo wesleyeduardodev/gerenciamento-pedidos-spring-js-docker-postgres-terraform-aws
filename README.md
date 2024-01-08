@@ -1,4 +1,11 @@
 
+
+## Links para uso da aplicação
+- Dados de login para autenticação básica: user: admin e senha: admin
+- Criar novos pedidos: http://localhost:8080/#!/pedidos/novo
+- Listar Pedidos: http://localhost:8080/#!/pedidos
+- Swagger: http://localhost:8080/pedidos-api/swagger-ui.html
+
 ## Proposta do desafio:
 
 A proposta deste desafio é conhecer suas habilidades de resolver problemas de negócio por meio de programação.
