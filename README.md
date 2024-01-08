@@ -4,7 +4,6 @@
 - Dados de login para autenticação básica: user: admin e senha: admin
 - Criar novos pedidos: http://localhost:8080/#!/pedidos/novo
 - Listar Pedidos: http://localhost:8080/#!/pedidos
-- Swagger: http://localhost:8080/pedidos-api/swagger-ui.html
 
 ## Proposta do desafio:
 
