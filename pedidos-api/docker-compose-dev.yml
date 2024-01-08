@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-
   mysql-db:
     container_name: mysql-db
     image: mysql:latest
@@ -35,6 +34,9 @@ services:
     restart: always
 
   fornecedores-api:
+    build:
+      context: ../fornecedores-api
+      dockerfile: Dockerfile.dev
     container_name: fornecedores-api
     image: wesleyeduardodev/fornecedores-api:latest
     environment:
@@ -52,7 +54,7 @@ services:
   pedidos-api:
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     container_name: pedidos-api
     image: wesleyeduardodev/pedidos-api:latest
     environment:

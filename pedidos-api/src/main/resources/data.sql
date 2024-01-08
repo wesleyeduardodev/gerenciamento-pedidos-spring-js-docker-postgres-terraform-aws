@@ -12,4 +12,3 @@ INSERT INTO produto (id, gtin, nome) VALUES (4, '7891910007110', 'AÇÚCAR DE CO
 INSERT INTO produto (id, gtin, nome) VALUES (5, '7891000053508', 'ACHOCOLATADO NESCAU 2.0');
 INSERT INTO produto (id, gtin, nome) VALUES (6, '7891000100103', 'LEITE CONDENSADO MOÇA');
 INSERT INTO produto (id, gtin, nome) VALUES (7, '7891991010856', 'CERVEJA BUDWEISER');
-INSERT INTO produto (id, gtin, nome) VALUES (8, '7891991010859', 'Coca Cola');
