@@ -36,7 +36,7 @@ services:
 
   fornecedores-api:
     build:
-      context: ../fornecedores-api
+      context: ./fornecedores-api
       dockerfile: Dockerfile.prod
     container_name: fornecedores-api
     image: wesleyeduardodev/fornecedores-api:latest
@@ -54,7 +54,7 @@ services:
 
   pedidos-api:
     build:
-      context: ./
+      context: ./pedidos-api
       dockerfile: Dockerfile.prod
     container_name: pedidos-api
     image: wesleyeduardodev/pedidos-api:latest
