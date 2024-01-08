@@ -67,3 +67,9 @@ Caso nenhum fornecedor atenda a quantidade mínima de qualquer um dos produtos, 
 O pedido deve ter um fornecedor e uma lista dos itens comprados. Caso o fornecedor retornado pela API ainda não esteja cadastrado, o sistema deverá incluí-lo para poder vincular com o pedido.
 
 O sistema também deverá possuir uma rota para listar todos os pedidos criados até o momento.
+
+## Comandos Terraform
+- terraform init
+- terraform plan
+- terraform apply --auto-approve
+- terraform destroy --auto-approve
