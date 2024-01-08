@@ -10,7 +10,7 @@ Seu desafio será implementar o Backend e integrar com o Frontend.
 
 Você deve desenvolver um sistema para realizar **pedidos** a partir de uma lista de **produtos**, conforme a imagem:
 
-![img.png](src/main/resources/readme/img.png)
+![img.png](readme-imgs/img.png)
 
 Os produtos **já estão cadastrados** e possuem 2 atributos: GTIN (código de barra) e nome.
 
@@ -52,11 +52,11 @@ Veja um exemplo do retorno da API externa para o GTIN 7894900011517:
 
 O sistema deve selecionar o melhor fornecedor para compra de cada produto considerando o menor preço que atenda a quantidade mínima de compra. Em seguida, deverá agrupar os produtos de um mesmo fornecedor e criar um pedido para cada um. O resultado será algo semelhante a imagem:
 
-![img_1.png](src/main/resources/readme/img_1.png)
+![img_1.png](readme-imgs/img_1.png)
 
 Caso nenhum fornecedor atenda a quantidade mínima de qualquer um dos produtos, o sistema deverá retornar uma mensagem informando o usuário e não deve criar nenhum pedido:
 
-![img_2.png](src/main/resources/readme/img_2.png)
+![img_2.png](readme-imgs/img_2.png)
 
 O pedido deve ter um fornecedor e uma lista dos itens comprados. Caso o fornecedor retornado pela API ainda não esteja cadastrado, o sistema deverá incluí-lo para poder vincular com o pedido.
 
