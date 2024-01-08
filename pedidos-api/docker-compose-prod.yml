@@ -35,11 +35,14 @@ services:
     restart: always
 
   fornecedores-api:
+    build:
+      context: ../fornecedores-api
+      dockerfile: Dockerfile.prod
     container_name: fornecedores-api
     image: wesleyeduardodev/fornecedores-api:latest
     environment:
       SERVER_PORT: 3000
-      SPRING_PROFILES_ACTIVE: dev
+      SPRING_PROFILES_ACTIVE: prod
       TZ: "America/Sao_Paulo"
     ports:
       - "81:3000"
@@ -52,12 +55,12 @@ services:
   pedidos-api:
     build:
       context: ./
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.prod
     container_name: pedidos-api
     image: wesleyeduardodev/pedidos-api:latest
     environment:
       SERVER_PORT: 8080
-      SPRING_PROFILES_ACTIVE: dev
+      SPRING_PROFILES_ACTIVE: prod
       TZ: "America/Sao_Paulo"
     ports:
       - "8080:8080"
