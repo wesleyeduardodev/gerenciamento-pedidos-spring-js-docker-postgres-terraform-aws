@@ -3,3 +3,4 @@
 /.idea/
 /pedidos-api/target/
 /pedidos-api/postgres-data/
+/deploy/terraform/.terraform/

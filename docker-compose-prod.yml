@@ -1,0 +1,75 @@
+version: '3'
+
+services:
+
+  mysql-db:
+    container_name: mysql-db
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: 'fornecedores'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    networks:
+      - docker-network
+    restart: always
+
+  postgres-db:
+    container_name: postgres-db
+    image: postgres:15
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "pedidos"
+      TZ: "America/Sao_Paulo"
+    ports:
+      - "5432:5432"
+      #volumes:
+      #-  ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - docker-network
+    restart: always
+
+  fornecedores-api:
+    build:
+      context: ../fornecedores-api
+      dockerfile: Dockerfile.prod
+    container_name: fornecedores-api
+    image: wesleyeduardodev/fornecedores-api:latest
+    environment:
+      SERVER_PORT: 3000
+      SPRING_PROFILES_ACTIVE: prod
+      TZ: "America/Sao_Paulo"
+    ports:
+      - "81:3000"
+    depends_on:
+      - mysql-db
+    networks:
+      - docker-network
+    restart: always
+
+  pedidos-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod
+    container_name: pedidos-api
+    image: wesleyeduardodev/pedidos-api:latest
+    environment:
+      SERVER_PORT: 8080
+      SPRING_PROFILES_ACTIVE: prod
+      TZ: "America/Sao_Paulo"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-db
+    networks:
+      - docker-network
+    restart: always
+
+networks:
+  docker-network:
+    driver: bridge
