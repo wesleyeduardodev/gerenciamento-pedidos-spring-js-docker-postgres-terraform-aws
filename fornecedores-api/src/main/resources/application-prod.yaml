@@ -8,7 +8,7 @@ spring:
   config:
     activate:
       on-profile:
-        - dev
+        - prod
 
   datasource:
     url: jdbc:mysql://mysql-db:3306/fornecedores?currentSchema=public
