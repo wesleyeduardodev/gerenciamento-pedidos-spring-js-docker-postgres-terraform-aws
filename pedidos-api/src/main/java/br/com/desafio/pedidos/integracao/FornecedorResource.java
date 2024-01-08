@@ -14,7 +14,7 @@ import java.util.Objects;
 
 @Component
 @Slf4j
-@Profile({"dev","dev-ide"})
+@Profile({"dev","prod","dev-ide"})
 public class FornecedorResource implements FonecedorStrategy {
 
     @Value(value = "${base.url.fornecedor}")
