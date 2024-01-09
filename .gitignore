@@ -7,3 +7,4 @@
 /deploy/terraform/terraform.tfstate
 /deploy/terraform/.terraform.lock.hcl
 /deploy/terraform/terraform.tfstate.backup
+/terraform.tfstate
