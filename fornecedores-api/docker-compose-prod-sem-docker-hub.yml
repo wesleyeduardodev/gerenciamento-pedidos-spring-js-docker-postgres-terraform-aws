@@ -1,0 +1,60 @@
+version: '3'
+
+#Alterar porta interna MySql: MYSQL_TCP_PORT: 3308
+
+services:
+  mysql-db:
+    container_name: mysql-db
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: 'fornecedores'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+      #volumes:
+      # - ./mysql-data:/var/lib/mysql/data
+    networks:
+      - docker-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+          cpus: "1.0"
+        reservations:
+          memory: 1024M
+          cpus: "1.0"
+
+  fornecedores-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod-sem-docker-hub
+    container_name: fornecedores-api
+    image: wesleyeduardodev/fornecedores-api:latest
+    environment:
+      SERVER_PORT: 3000
+      SPRING_PROFILES_ACTIVE: prod
+      TZ: "America/Sao_Paulo"
+    ports:
+      - "80:3000"
+    depends_on:
+      - mysql-db
+    networks:
+      - docker-network
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+          cpus: "1.0"
+        reservations:
+          memory: 1024M
+          cpus: "1.0"
+
+networks:
+  docker-network:
+    driver: bridge

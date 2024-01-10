@@ -15,38 +15,9 @@
 - Executar comando "mvn clean install" para gerar o target do projeto.
 - Ainda com o terminal na raiz do projeto, executar o comando "docker compose -f docker-compose-dev.yml up -d" (Criar as imagens e subir todos os containers)
 - Obs: Caso ocorra problemas ao subir todos os container de forma simultanea basta subir um container de cada vez. (As vezes pode ocorrer problemas onde um container precisa de outro que ainda não subiu totalmente - Isso será resolvido posteriormente usando o recurso "wait-for-it")
-- Ao rodar a API de Fornecedores é necessário ter cadastrado pelo menos alguns fornecedores para um produto
-- Alternativa 1: Abra o Postman, crie ums requisição do tipo POST (http://localhost:81/api/fornecedores/produtos) e insira o body abaixo:
-```json
-{
-  "gtin": "7894900011517",
-  "fornecedores": [
-    {
-      "cnpj": "56.918.868/0001-20",
-      "precos": [
-        {
-          "preco": 3,
-          "quantidadeMinima": 20
-        }
-      ],
-      "nome": "Fornecedor 1"
-    },
-    {
-      "cnpj": "37.563.823/0001-35",
-      "precos": [
-        {
-          "preco": 5,
-          "quantidadeMinima": 10
-        }
-      ],
-      "nome": "Fornecedor 2"
-    }
-  ]
-}
-```
-- Execute a requisição. Isso irá criar 2 Fornecedores para o produto de código de barras 7894900011517
-- Alternativa 2: Abri o Swagger do projeto da API de fornecedores: http://localhost:81/fornecedores-api/swagger-ui/index.html
-- Procurar pelo Metodo POST, colar o JSON acima e executar
+
+## Executar o Projeto ambiente Prod
+- docker compose -f docker-compose-prod-com-docker-hub.yml up -d
 
 ## Links para uso da aplicação
 - Dados de login para autenticação básica: user: admin e senha: admin

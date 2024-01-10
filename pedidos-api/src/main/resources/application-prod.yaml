@@ -36,7 +36,7 @@ basic:
 
 base:
   url:
-    fornecedor: http://fornecedores-api:3000/api/fornecedores/produtos/
+    fornecedor: http://fornecedores-api:3001/api/fornecedores/produtos/
 
 path:
   resourse:

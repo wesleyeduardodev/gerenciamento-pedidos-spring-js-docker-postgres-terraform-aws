@@ -30,6 +30,7 @@
     cd desafio-pedidos-spring-js-docker-postgres-terraform-aws
     git checkout main
     git pull
+    cd pedidos-api
 
 #run your docker compose file
-    docker-compose -f docker-compose-prod.yml up -d
+    docker-compose -f docker-compose-prod-com-docker-hub.yml up -d
