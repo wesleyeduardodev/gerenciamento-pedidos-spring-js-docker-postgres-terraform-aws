@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  postgres-db:
+  postgres-db-pedido:
     container_name: postgres-db-pedidos
     image: postgres:15
     environment:

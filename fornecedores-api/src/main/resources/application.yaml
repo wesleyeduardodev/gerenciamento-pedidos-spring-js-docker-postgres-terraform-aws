@@ -4,17 +4,18 @@ server:
 spring:
 
   datasource:
-    username: user
-    url: jdbc:mysql://localhost:3306/fornecedores
+    username: postgres
+    url: jdbc:postgresql://localhost:5433/fornecedores
     password: root
+    driver-class-name: "org.postgresql.Driver"
 
   jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     defer-datasource-initialization: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
 
   sql:
     init:

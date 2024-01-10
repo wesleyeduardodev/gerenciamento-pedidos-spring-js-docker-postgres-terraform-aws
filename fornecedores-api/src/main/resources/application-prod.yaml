@@ -11,20 +11,18 @@ spring:
         - prod
 
   datasource:
-    url: jdbc:mysql://mysql-db:3306/fornecedores?currentSchema=public
-    username: user
+    username: postgres
+    url: jdbc:postgresql://postgres-db-fornecedores:5433/fornecedores
     password: root
-    hikari:
-      maximum-pool-size: 30
-      minimum-idle: 1
+    driver-class-name: "org.postgresql.Driver"
 
   jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     defer-datasource-initialization: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
 
   sql:
     init:

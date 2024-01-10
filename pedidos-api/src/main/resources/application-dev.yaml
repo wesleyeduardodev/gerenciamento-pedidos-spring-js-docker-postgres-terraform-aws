@@ -11,7 +11,7 @@ spring:
         - dev
 
   datasource:
-    url: jdbc:postgresql://postgres-db:5432/pedidos?currentSchema=public
+    url: jdbc:postgresql://postgres-db-pedidos:5432/pedidos?currentSchema=public
     username: "postgres"
     password: "root"
     driver-class-name: "org.postgresql.Driver"
@@ -36,7 +36,7 @@ basic:
 
 base:
   url:
-    fornecedor: http://fornecedores-api:3000/api/fornecedores/produtos/
+    fornecedor: http://fornecedores-api:3001/api/fornecedores/produtos/
 
 path:
   resourse:

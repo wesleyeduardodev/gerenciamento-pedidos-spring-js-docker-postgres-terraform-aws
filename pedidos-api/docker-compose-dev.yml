@@ -1,24 +1,25 @@
 version: '3'
 
 services:
-  mysql-db:
-    container_name: mysql-db
-    image: mysql:latest
+  postgres-db-fornecedores:
+    container_name: postgres-db-fornecedores
+    image: postgres:15
     environment:
-      MYSQL_DATABASE: 'fornecedores'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'root'
-      MYSQL_ROOT_PASSWORD: 'root'
-    ports:
-      - '3306:3306'
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "fornecedores"
+      TZ: "America/Sao_Paulo"
     expose:
-      - '3306'
+      - "5433"
+    ports:
+      - "5433:5433"
+    command: -p 5433
     networks:
       - docker-network
     restart: always
 
-  postgres-db:
-    container_name: postgres-db
+  postgres-db-pedidos:
+    container_name: postgres-db-pedidos
     image: postgres:15
     environment:
       POSTGRES_USER: "postgres"
@@ -34,37 +35,32 @@ services:
     restart: always
 
   fornecedores-api:
-    build:
-      context: ../fornecedores-api
-      dockerfile: Dockerfile.dev
     container_name: fornecedores-api
     image: wesleyeduardodev/fornecedores-api:latest
     environment:
-      SERVER_PORT: 3000
+      SERVER_PORT: 3001
       SPRING_PROFILES_ACTIVE: dev
       TZ: "America/Sao_Paulo"
     ports:
-      - "81:3000"
+      - "81:3001"
     depends_on:
-      - mysql-db
+      - postgres-db-fornecedores
     networks:
       - docker-network
     restart: always
 
   pedidos-api:
-    build:
-      context: ./
-      dockerfile: Dockerfile.dev
     container_name: pedidos-api
     image: wesleyeduardodev/pedidos-api:latest
     environment:
-      SERVER_PORT: 8080
+      SERVER_PORT: 3000
       SPRING_PROFILES_ACTIVE: dev
       TZ: "America/Sao_Paulo"
     ports:
-      - "8080:8080"
+      - "80:3000"
     depends_on:
-      - postgres-db
+      - postgres-db-pedidos
+      - fornecedores-api
     networks:
       - docker-network
     restart: always

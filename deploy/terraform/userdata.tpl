@@ -33,4 +33,4 @@
     cd pedidos-api
 
 #run your docker compose file
-    docker-compose -f docker-compose-prod-com-docker-hub.yml up -d
+    docker-compose -f docker-compose-prod-sem-criacao-imagem-automatizada.yml up -d
