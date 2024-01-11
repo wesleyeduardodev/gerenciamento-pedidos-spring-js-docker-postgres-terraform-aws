@@ -5,7 +5,7 @@
 - Maven 3+ configurado nas variáveis de ambiente do Windows. Sugestão(https://dlcdn.apache.org/maven/maven-3/3.9.6/source/apache-maven-3.9.6-src.zip)
 
 ## Links para uso da aplicação no ambiente AWS
-- Dados de login para autenticação básica: user: admin e senha: admin
+- Dados de login para autenticação básica: user: **admin** e senha: **admin**
 - Criar novos pedidos: http://ec2-3-227-230-251.compute-1.amazonaws.com/#!/pedidos/novo
 - Listar Pedidos: http://ec2-3-227-230-251.compute-1.amazonaws.com/#!/pedidos
 - Swagger: http://ec2-3-227-230-251.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
@@ -15,7 +15,7 @@
 - Opção 2: Abrir pasta pedidos-api e executar o arquivo "run-desafio.sh"
 
 ## Links para uso da aplicação no ambiente local
-- Dados de login para autenticação básica: user: admin e senha: admin
+- Dados de login para autenticação básica: user: **admin** e **senha**: admin
 - Criar novos pedidos: http://localhost/#!/pedidos/novo
 - Listar Pedidos: http://localhost/#!/pedidos
 - Swagger: http://localhost/pedidos-api/swagger-ui.html
