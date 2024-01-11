@@ -1,10 +1,8 @@
 
-
-## Links para uso da aplicação no ambiente local
-- Dados de login para autenticação básica: user: admin e senha: admin
-- Criar novos pedidos: http://localhost/#!/pedidos/novo
-- Listar Pedidos: http://localhost/#!/pedidos
-- Swagger: http://localhost/pedidos-api/swagger-ui.html
+## Requisitos Gerais para execução do projeto em ambiente local
+- Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
+- Java 17 configurado nas variáveis de ambiente do Windows. Sugestão(https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.zip)
+- Maven 3+ configurado nas variáveis de ambiente do Windows. Sugestão(https://dlcdn.apache.org/maven/maven-3/3.9.6/source/apache-maven-3.9.6-src.zip)
 
 ## Links para uso da aplicação no ambiente AWS
 - Dados de login para autenticação básica: user: admin e senha: admin
@@ -12,7 +10,21 @@
 - Listar Pedidos: http://ec2-3-227-230-251.compute-1.amazonaws.com/#!/pedidos
 - Swagger: http://ec2-3-227-230-251.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
 
-## Proposta do desafio:
+## Executar o Projeto API desafio de pedidos em ambiente local via Docker
+- Opção 1: Abrir um terminal na pasta raiz do projeto API de pedidos e executar comando "sh run-desafio.sh"
+- Opção 2: Abrir pasta pedidos-api e executar o arquivo "run-desafio.sh"
+
+## Links para uso da aplicação no ambiente local
+- Dados de login para autenticação básica: user: admin e senha: admin
+- Criar novos pedidos: http://localhost/#!/pedidos/novo
+- Listar Pedidos: http://localhost/#!/pedidos
+- Swagger: http://localhost/pedidos-api/swagger-ui.html
+
+## Instruções de Deploy na AWS
+- Utilize como base a documentação do arquivo README.md presente no diretório backend no seguinte projeto: https://github.com/wesleyeduardodev/crud-angular-spring-deploy-aws-docker-postgres-terraform/tree/master/backend
+- Faça os devidos ajustes de acordo com sua necessidade
+
+## Regras de negócio do desafio:
 
 A proposta deste desafio é conhecer suas habilidades de resolver problemas de negócio por meio de programação.
 Estamos enviando para você um arquivo zip contendo um projeto de uma aplicação Java Web (Spring Boot, Hibernate e AngularJs) com o Frontend já desenvolvido.
@@ -74,9 +86,4 @@ Caso nenhum fornecedor atenda a quantidade mínima de qualquer um dos produtos, 
 O pedido deve ter um fornecedor e uma lista dos itens comprados. Caso o fornecedor retornado pela API ainda não esteja cadastrado, o sistema deverá incluí-lo para poder vincular com o pedido.
 
 O sistema também deverá possuir uma rota para listar todos os pedidos criados até o momento.
-
-## Comandos Terraform
-- terraform init
-- terraform plan
-- terraform apply --auto-approve
-- terraform destroy --auto-approve
+ devidos ajuste de acordo com sua necessidade
