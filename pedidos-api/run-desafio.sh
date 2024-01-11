@@ -29,25 +29,6 @@ echo ""
 echo "Imagem da aplicação API Pedidos gerada com sucesso!"
 
 echo ""
-echo "Realizando login no docker..."
-docker login
-echo ""
-echo "Login realizado com sucesso!"
-
-echo ""
-echo "Atualizando imagem da API de Fornecedores no Docker Hub..."
-docker push wesleyeduardodev/fornecedores-api:latest
-echo ""
-echo "Imagem da API de Fornecedores atualizada com sucesso!"
-
-echo ""
-echo "Atualizando imagem da API de Pedidos no Docker Hub..."
-docker push wesleyeduardodev/pedidos-api:latest
-echo ""
-echo "Imagem da API de Pedidos atualizada com sucesso!"
-
-cd ..
-echo ""
 echo "Subindo containers..."
 docker compose -f docker-compose-dev.yml up -d
 echo "Containers OK!"

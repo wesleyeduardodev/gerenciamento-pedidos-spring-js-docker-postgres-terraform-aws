@@ -11,7 +11,7 @@
 - Swagger: http://ec2-3-227-230-251.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
 
 ## Executar o Projeto API desafio de pedidos em ambiente local via Docker
-- Opção 1: Abrir um terminal na pasta raiz do projeto API de pedidos e executar comando "sh run-desafio.sh"
+- Opção 1: Abrir um terminal no diretório pedidos-api e executar comando "sh run-desafio.sh"
 - Opção 2: Abrir pasta pedidos-api e executar o arquivo "run-desafio.sh"
 
 ## Links para uso da aplicação no ambiente local
