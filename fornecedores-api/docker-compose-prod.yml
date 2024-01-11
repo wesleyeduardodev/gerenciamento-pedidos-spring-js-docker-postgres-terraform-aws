@@ -27,9 +27,6 @@ services:
           cpus: "1.0"
 
   fornecedores-api:
-    build:
-      context: ./
-      dockerfile: Dockerfile.prod
     container_name: fornecedores-api
     image: wesleyeduardodev/fornecedores-api:latest
     environment:
