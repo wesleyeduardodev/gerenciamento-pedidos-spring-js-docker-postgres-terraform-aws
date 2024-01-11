@@ -8,9 +8,9 @@
 
 ## Links para uso da aplicação no ambiente AWS
 - Dados de login para autenticação básica: user: admin e senha: admin
-- Criar novos pedidos: http://ec2-18-215-125-99.compute-1.amazonaws.com/#!/pedidos/novo
-- Listar Pedidos: http://ec2-18-215-125-99.compute-1.amazonaws.com/#!/pedidos
-- Swagger: http://ec2-18-215-125-99.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
+- Criar novos pedidos: http://ec2-3-230-151-172.compute-1.amazonaws.com/#!/pedidos/novo
+- Listar Pedidos: http://ec2-3-230-151-172.compute-1.amazonaws.com/#!/pedidos
+- Swagger: http://ec2-3-230-151-172.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
 
 ## Proposta do desafio:
 
