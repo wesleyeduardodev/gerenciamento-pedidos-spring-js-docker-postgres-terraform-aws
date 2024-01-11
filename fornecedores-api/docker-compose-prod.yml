@@ -27,6 +27,9 @@ services:
           cpus: "1.0"
 
   fornecedores-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile.prod
     container_name: fornecedores-api
     image: wesleyeduardodev/fornecedores-api:latest
     environment:
@@ -34,7 +37,7 @@ services:
       SPRING_PROFILES_ACTIVE: prod
       TZ: "America/Sao_Paulo"
     ports:
-      - "81:3000"
+      - "80:3000"
     depends_on:
       - postgres-db-fornecedores
     networks:

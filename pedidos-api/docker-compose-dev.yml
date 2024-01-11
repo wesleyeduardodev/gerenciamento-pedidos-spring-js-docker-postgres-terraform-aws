@@ -35,6 +35,9 @@ services:
     restart: always
 
   fornecedores-api:
+    build:
+      context: ../fornecedores-api
+      dockerfile: Dockerfile.dev
     container_name: fornecedores-api
     image: wesleyeduardodev/fornecedores-api:latest
     environment:
@@ -50,6 +53,9 @@ services:
     restart: always
 
   pedidos-api:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
     container_name: pedidos-api
     image: wesleyeduardodev/pedidos-api:latest
     environment:
@@ -59,6 +65,7 @@ services:
     ports:
       - "80:3000"
     depends_on:
+      - postgres-db-fornecedores
       - postgres-db-pedidos
       - fornecedores-api
     networks:

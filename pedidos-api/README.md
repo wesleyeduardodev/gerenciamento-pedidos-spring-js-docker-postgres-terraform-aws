@@ -17,13 +17,19 @@
 - Obs: Caso ocorra problemas ao subir todos os container de forma simultanea basta subir um container de cada vez. (As vezes pode ocorrer problemas onde um container precisa de outro que ainda não subiu totalmente - Isso será resolvido posteriormente usando o recurso "wait-for-it")
 
 ## Executar o Projeto ambiente Prod
-- docker compose -f docker-compose-prod-com-docker-hub.yml up -d
+- docker compose -f docker-compose-prod.yml up -d
 
-## Links para uso da aplicação
+## Links para uso da aplicação no ambiente local
 - Dados de login para autenticação básica: user: admin e senha: admin
-- Criar novos pedidos: http://localhost:8080/#!/pedidos/novo
-- Listar Pedidos: http://localhost:8080/#!/pedidos
-- Swagger: http://localhost:8080/pedidos-api/swagger-ui.html
+- Criar novos pedidos: http://localhost/#!/pedidos/novo
+- Listar Pedidos: http://localhost/#!/pedidos
+- Swagger: http://localhost/pedidos-api/swagger-ui.html
+
+## Links para uso da aplicação no ambiente AWS
+- Dados de login para autenticação básica: user: admin e senha: admin
+- Criar novos pedidos: http://ec2-18-215-125-99.compute-1.amazonaws.com/#!/pedidos/novo
+- Listar Pedidos: http://ec2-18-215-125-99.compute-1.amazonaws.com/#!/pedidos
+- Swagger: http://ec2-18-215-125-99.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
 
 ## Comandos Docker que podem ser utéis
 - Remover todos os containers: docker rm $(docker ps -a -q) -f

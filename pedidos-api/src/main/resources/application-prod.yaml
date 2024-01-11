@@ -11,7 +11,7 @@ spring:
         - prod
 
   datasource:
-    url: jdbc:postgresql://postgres-db:5432/pedidos?currentSchema=public
+    url: jdbc:postgresql://postgres-db-pedidos:5432/pedidos?currentSchema=public
     username: "postgres"
     password: "root"
     driver-class-name: "org.postgresql.Driver"
