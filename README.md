@@ -15,7 +15,7 @@
 - Opção 2: Abrir pasta pedidos-api e executar o arquivo "run-desafio.sh"
 
 ## Links para uso da aplicação no ambiente local
-- Dados de login para autenticação básica: user: **admin** e **senha**: admin
+- Dados de login para autenticação básica: user: **admin** e senha: **admin**
 - Criar novos pedidos: http://localhost/#!/pedidos/novo
 - Listar Pedidos: http://localhost/#!/pedidos
 - Swagger: http://localhost/pedidos-api/swagger-ui.html
