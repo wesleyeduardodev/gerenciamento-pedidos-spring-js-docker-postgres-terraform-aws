@@ -1,14 +1,13 @@
-
-## Requisitos Gerais para execução do projeto em ambiente local
-- Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
-- Java 17 configurado nas variáveis de ambiente do Windows. Sugestão(https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.zip)
-- Maven 3+ configurado nas variáveis de ambiente do Windows. Sugestão(https://dlcdn.apache.org/maven/maven-3/3.9.6/source/apache-maven-3.9.6-src.zip)
-
 ## Links para uso da aplicação no ambiente AWS
 - Dados de login para autenticação básica: user: **admin** e senha: **admin**
 - Criar novos pedidos: http://ec2-3-227-230-251.compute-1.amazonaws.com/#!/pedidos/novo
 - Listar Pedidos: http://ec2-3-227-230-251.compute-1.amazonaws.com/#!/pedidos
 - Swagger: http://ec2-3-227-230-251.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
+
+## Requisitos Gerais para execução do projeto em ambiente local
+- Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
+- Java 17 configurado nas variáveis de ambiente do Windows. Sugestão(https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.zip)
+- Maven 3+ configurado nas variáveis de ambiente do Windows. Sugestão(https://dlcdn.apache.org/maven/maven-3/3.9.6/source/apache-maven-3.9.6-src.zip)
 
 ## Executar o Projeto API desafio de pedidos em ambiente local via Docker
 - Opção 1: Abrir um terminal no diretório pedidos-api e executar comando "sh run-desafio.sh"
