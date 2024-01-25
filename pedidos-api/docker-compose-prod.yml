@@ -2,54 +2,19 @@ version: '3'
 
 services:
 
-  postgres-db-fornecedores:
-    container_name: postgres-db-fornecedores
+  postgres-db:
+    container_name: postgres-db
     image: postgres:15
     environment:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "root"
-      POSTGRES_DB: "fornecedores"
-      TZ: "America/Sao_Paulo"
-    expose:
-      - "5433"
-    ports:
-      - "5433:5433"
-    command: -p 5433
-    networks:
-      - docker-network
-    restart: always
-    deploy:
-      resources:
-        limits:
-          memory: 200M
-          cpus: "1"
-        reservations:
-          memory: 200M
-          cpus: "1"
-
-  postgres-db-pedidos:
-    container_name: postgres-db-pedidos
-    image: postgres:15
-    environment:
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "root"
-      POSTGRES_DB: "pedidos"
+      POSTGRES_DB: "desafio"
       TZ: "America/Sao_Paulo"
     ports:
       - "5432:5432"
-      #volumes:
-      #-  ./postgres-data:/var/lib/postgresql/data
     networks:
       - docker-network
     restart: always
-    deploy:
-      resources:
-        limits:
-          memory: 200M
-          cpus: "1"
-        reservations:
-          memory: 200M
-          cpus: "1"
 
   fornecedores-api:
     container_name: fornecedores-api
@@ -61,18 +26,10 @@ services:
     ports:
       - "81:3001"
     depends_on:
-      - postgres-db-fornecedores
+      - postgres-db
     networks:
       - docker-network
     restart: always
-    deploy:
-      resources:
-        limits:
-          memory: 250M
-          cpus: "1"
-        reservations:
-          memory: 250M
-          cpus: "1"
 
   pedidos-api:
     container_name: pedidos-api
@@ -84,20 +41,11 @@ services:
     ports:
       - "80:3000"
     depends_on:
-      - postgres-db-fornecedores
-      - postgres-db-pedidos
+      - postgres-db
       - fornecedores-api
     networks:
       - docker-network
     restart: always
-    deploy:
-      resources:
-        limits:
-          memory: 350M
-          cpus: "1"
-        reservations:
-          memory: 350M
-          cpus: "1"
 
 networks:
   docker-network:

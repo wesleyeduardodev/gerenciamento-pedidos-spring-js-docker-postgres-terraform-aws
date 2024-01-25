@@ -12,7 +12,8 @@ import javax.persistence.*;
 public class Fornecedor {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "fornecedor_seq_gen")
+    @SequenceGenerator(name = "fornecedor_seq_gen", sequenceName = "fornecedor_seq", allocationSize = 1)
     private Long id;
 
     @Column(name = "cnpj", unique = true, nullable = false, length = 14)

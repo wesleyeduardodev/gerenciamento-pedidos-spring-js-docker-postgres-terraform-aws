@@ -12,7 +12,7 @@ spring:
 
   datasource:
     username: postgres
-    url: jdbc:postgresql://postgres-db-fornecedores:5433/fornecedores
+    url: jdbc:postgresql://postgres-db:5432/desafio?currentSchema=public
     password: root
     driver-class-name: "org.postgresql.Driver"
 
@@ -27,6 +27,8 @@ spring:
   sql:
     init:
       mode: always
+      data-locations: classpath:data-prod.sql
+
 
 springdoc:
   swagger-ui:
