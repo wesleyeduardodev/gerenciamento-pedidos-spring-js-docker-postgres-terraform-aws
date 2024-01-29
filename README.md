@@ -1,8 +1,8 @@
 ## Links para uso da aplicação no ambiente AWS
 - Dados de login para autenticação básica: user: **admin** e senha: **admin**
-- Criar novos pedidos: http://ec2-34-201-10-222.compute-1.amazonaws.com/#!/pedidos/novo
-- Listar Pedidos: http://ec2-34-201-10-222.compute-1.amazonaws.com/#!/pedidos
-- Swagger: http://ec2-34-201-10-222.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
+- Criar novos pedidos: http://ec2-3-239-242-38.compute-1.amazonaws.com/#!/pedidos/novo
+- Listar Pedidos: http://ec2-3-239-242-38.compute-1.amazonaws.com/#!/pedidos
+- Swagger: http://ec2-3-239-242-38.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
 
 ## Requisitos Gerais para execução do projeto em ambiente local
 - Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
