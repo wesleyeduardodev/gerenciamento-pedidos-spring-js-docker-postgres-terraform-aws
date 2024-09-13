@@ -7,12 +7,11 @@
 - Dados de login para autenticação básica: user: **admin** e senha: **admin**
 - Criar novos pedidos: http://localhost/#!/pedidos/novo
 - Listar Pedidos: http://localhost/#!/pedidos
-- Swagger: http://localhost/pedidos-api/swagger-ui.html
+- Swagger API Pedidos: http://localhost/pedidos-api/swagger-ui.html
+- Swagger API Fornecedores: http://localhost:81/fornecedores-api/swagger-ui.html
 
 ## Requisitos Gerais para execução do projeto em ambiente local
 - Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
-- Java 17 configurado nas variáveis de ambiente do Windows. Sugestão(https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.zip)
-- Maven 3+ configurado nas variáveis de ambiente do Windows. Sugestão(https://dlcdn.apache.org/maven/maven-3/3.9.6/source/apache-maven-3.9.6-src.zip)
 
 ## Regras de negócio do desafio:
 
