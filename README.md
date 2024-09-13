@@ -1,5 +1,8 @@
 
-## Executar o Projeto API desafio de pedidos em ambiente local via Docker
+## Requisitos Gerais para execução do projeto em ambiente local usando Docker
+- Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
+
+## Executar o Projeto API desafio de pedidos em ambiente local usando Docker
 - Opção 1: Abrir um terminal na pasta raiz do projeto e executar o comando "sh executar-projeto.sh"
 - Opção 2: Abrir pasta pedidos-api e executar o arquivo "sh executar-projeto.sh". 
 
@@ -9,9 +12,6 @@
 - Listar Pedidos: http://localhost/#!/pedidos
 - Swagger API Pedidos: http://localhost/pedidos-api/swagger-ui.html
 - Swagger API Fornecedores: http://localhost:81/fornecedores-api/swagger-ui.html
-
-## Requisitos Gerais para execução do projeto em ambiente local
-- Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
 
 ## Regras de negócio do desafio:
 
