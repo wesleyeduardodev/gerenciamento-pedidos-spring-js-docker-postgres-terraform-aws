@@ -1,17 +1,7 @@
-## Links para uso da aplicação no ambiente AWS
-- Dados de login para autenticação básica: user: **admin** e senha: **admin**
-- Criar novos pedidos: http://ec2-44-205-6-211.compute-1.amazonaws.com/#!/pedidos/novo
-- Listar Pedidos: http://ec2-44-205-6-211.compute-1.amazonaws.com/#!/pedidos
-- Swagger: http://ec2-44-205-6-211.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
-
-## Requisitos Gerais para execução do projeto em ambiente local
-- Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
-- Java 17 configurado nas variáveis de ambiente do Windows. Sugestão(https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.zip)
-- Maven 3+ configurado nas variáveis de ambiente do Windows. Sugestão(https://dlcdn.apache.org/maven/maven-3/3.9.6/source/apache-maven-3.9.6-src.zip)
 
 ## Executar o Projeto API desafio de pedidos em ambiente local via Docker
-- Opção 1: Abrir um terminal no diretório pedidos-api e executar comando "sh run-desafio.sh"
-- Opção 2: Abrir pasta pedidos-api e executar o arquivo "run-desafio.sh"
+- Opção 1: Abrir um terminal na pasta raiz do projeto e executar o comando "sh executar-projeto.sh"
+- Opção 2: Abrir pasta pedidos-api e executar o arquivo "sh executar-projeto.sh". 
 
 ## Links para uso da aplicação no ambiente local
 - Dados de login para autenticação básica: user: **admin** e senha: **admin**
@@ -19,9 +9,10 @@
 - Listar Pedidos: http://localhost/#!/pedidos
 - Swagger: http://localhost/pedidos-api/swagger-ui.html
 
-## Instruções de Deploy na AWS
-- Utilize como base a documentação do arquivo README.md presente no diretório backend no seguinte projeto: https://github.com/wesleyeduardodev/crud-angular-spring-deploy-aws-docker-postgres-terraform/tree/master/backend
-- Faça os devidos ajustes de acordo com sua necessidade
+## Requisitos Gerais para execução do projeto em ambiente local
+- Docker/WSL2 instalado e configurado no ambiente Windows. Sugestão(https://github.com/codeedu/wsl2-docker-quickstart)
+- Java 17 configurado nas variáveis de ambiente do Windows. Sugestão(https://corretto.aws/downloads/latest/amazon-corretto-17-x64-windows-jdk.zip)
+- Maven 3+ configurado nas variáveis de ambiente do Windows. Sugestão(https://dlcdn.apache.org/maven/maven-3/3.9.6/source/apache-maven-3.9.6-src.zip)
 
 ## Regras de negócio do desafio:
 
@@ -86,3 +77,14 @@ O pedido deve ter um fornecedor e uma lista dos itens comprados. Caso o forneced
 
 O sistema também deverá possuir uma rota para listar todos os pedidos criados até o momento.
  devidos ajuste de acordo com sua necessidade
+
+
+## Links para uso da aplicação no ambiente AWS (MÁQUINA INATIVA NO MOMENTO)
+- Dados de login para autenticação básica: user: **admin** e senha: **admin**
+- Criar novos pedidos: http://ec2-44-205-6-211.compute-1.amazonaws.com/#!/pedidos/novo
+- Listar Pedidos: http://ec2-44-205-6-211.compute-1.amazonaws.com/#!/pedidos
+- Swagger: http://ec2-44-205-6-211.compute-1.amazonaws.com/pedidos-api/swagger-ui.html
+
+## Instruções de Deploy na AWS
+- Utilize como base a documentação do arquivo README.md presente no diretório backend no seguinte projeto: https://github.com/wesleyeduardodev/crud-angular-spring-deploy-aws-docker-postgres-terraform/tree/master/backend
+- Faça os devidos ajustes de acordo com sua necessidade
